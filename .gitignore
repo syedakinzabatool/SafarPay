@@ -1,2 +1,8 @@
 # Ignore local Firebase config to avoid committing API keys
 /app/google-services.json
+
+# Ignore build artifacts (may contain embedded keys in generated resources/APKs)
+/app/build/
+
+# Ignore APKs
+*.apk
