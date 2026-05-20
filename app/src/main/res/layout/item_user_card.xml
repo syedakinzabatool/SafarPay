@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp" android:layout_marginBottom="10dp"
+    app:cardCornerRadius="16dp" app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/colorSurface">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical">
+
+        <!-- Circular avatar -->
+        <FrameLayout android:layout_width="48dp" android:layout_height="48dp"
+            android:layout_marginEnd="14dp">
+            <View android:layout_width="48dp" android:layout_height="48dp"
+                android:background="@drawable/bg_circle_avatar"/>
+            <TextView android:id="@+id/tvAvatarLetter"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:text="U"
+                android:textSize="20sp" android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimary"/>
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvUserName"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Name" android:textSize="15sp" android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorText"/>
+            <TextView android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="email@example.com" android:textSize="12sp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/colorTextSecondary" android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <TextView android:id="@+id/tvUserStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ACTIVE" android:textSize="10sp" android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorSuccess" android:background="@drawable/bg_pill_success"
+                android:paddingHorizontal="10dp" android:paddingVertical="5dp"
+                android:textAllCaps="true"/>
+
+            <Button
+                android:id="@+id/btnToggleUser"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Deactivate"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimaryLight"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnDeleteUser"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Delete"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorDanger"
+                android:backgroundTint="@color/colorDangerLight"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

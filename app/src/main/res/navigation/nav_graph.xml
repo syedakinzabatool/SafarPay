@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.safarpay.ui.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_createTrip"  app:destination="@id/createTripFragment"/>
+        <action android:id="@+id/action_home_to_myTrips"      app:destination="@id/myTripsFragment"/>
+        <action android:id="@+id/action_home_to_addExpense"  app:destination="@id/addExpenseFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/createTripFragment"
+        android:name="com.safarpay.ui.trip.CreateTripFragment"
+        android:label="Create Trip"/>
+
+    <fragment android:id="@+id/addExpenseFragment"
+        android:name="com.safarpay.ui.expense.AddExpenseFragment"
+        android:label="Add Expense">
+        <argument android:name="expenseId" app:argType="integer" android:defaultValue="0"/>
+    </fragment>
+
+    <fragment android:id="@+id/budgetFragment"
+        android:name="com.safarpay.ui.budget.BudgetFragment"
+        android:label="Budget"/>
+
+    <fragment android:id="@+id/ledgerFragment"
+        android:name="com.safarpay.ui.ledger.LedgerFragment"
+        android:label="Ledger">
+        <action android:id="@+id/action_ledger_to_addExpense" app:destination="@id/addExpenseFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.safarpay.ui.profile.ProfileFragment"
+        android:label="Profile"/>
+
+    <fragment android:id="@+id/myTripsFragment"
+        android:name="com.safarpay.ui.trip.MyTripsFragment"
+        android:label="My Trips"/>
+
+    <fragment android:id="@+id/converterFragment"
+        android:name="com.safarpay.ui.converter.ConverterFragment"
+        android:label="Converter"/>
+
+</navigation>

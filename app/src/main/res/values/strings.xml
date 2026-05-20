@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SafarPay</string>
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue your journey</string>
+    <string name="login_google">Continue with Google</string>
+    <string name="login_or">or continue with email</string>
+    <string name="google_web_client_id">130731732609-mgvtcrisquft0gke8dhoel4ev3gd40tc.apps.googleusercontent.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="trip_detail_id">Trip ID: %1$s</string>
+    <string name="trip_detail_dates">%1$s to %2$s</string>
+    <string name="delete_trip_title">Delete Trip</string>
+    <string name="delete_trip_confirm">Delete "%1$s" permanently?</string>
+    <string name="trip_deleted">Trip deleted</string>
+    <string name="trip_delete_failed">Could not delete trip</string>
+    <string name="unknown_owner">Unknown owner</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+</resources>

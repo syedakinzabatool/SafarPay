@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="colorPrimary">#00897B</color>
+    <color name="colorPrimaryDark">#00695C</color>
+    <color name="colorPrimaryLight">#B2DFDB</color>
+    <color name="colorPrimaryMid">#26A69A</color>
+
+    <!-- Surface & backgrounds -->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorBackground">#F4F7F6</color>
+    <color name="colorCardBg">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="colorText">#1C2B2A</color>
+    <color name="colorTextSecondary">#637370</color>
+    <color name="colorHint">#9EB0AC</color>
+
+    <!-- Accent -->
+    <color name="colorAccent">#00897B</color>
+    <color name="colorWarning">#E65100</color>
+    <color name="colorWarningLight">#FFF3E0</color>
+    <color name="colorSuccess">#1B5E20</color>
+    <color name="colorSuccessLight">#E8F5E9</color>
+    <color name="colorAmber">#F59E0B</color>
+    <color name="colorAmberLight">#FFFDE7</color>
+
+    <color name="colorError">#C62828</color>
+    <color name="colorDanger">#C62828</color>
+    <color name="colorDangerLight">#FFEBEE</color>
+
+    <!-- Divider / border -->
+    <color name="colorDivider">#E8EDEC</color>
+    <color name="colorBorder">#D0DEDD</color>
+
+    <!-- Chart colors -->
+    <color name="colorChart1">#00897B</color>
+    <color name="colorChart2">#26A69A</color>
+    <color name="colorChart3">#80CBC4</color>
+    <color name="colorChart4">#F59E0B</color>
+    <color name="colorChart5">#EF5350</color>
+
+    <!-- Material3 required tokens -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#B2DFDB</color>
+    <color name="colorOnSecondaryContainer">#1C2B2A</color>
+</resources>

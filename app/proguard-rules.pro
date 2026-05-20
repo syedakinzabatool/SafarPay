@@ -1,0 +1,3 @@
+-keep class com.safarpay.data.** { *; }
+-keepattributes *Annotation*
+-dontwarn com.google.firebase.**

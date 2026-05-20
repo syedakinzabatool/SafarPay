@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:background="@color/colorPrimary"
+    android:padding="32dp">
+
+    <!-- Logo circle -->
+    <FrameLayout android:layout_width="96dp" android:layout_height="96dp"
+        android:layout_marginBottom="24dp">
+        <View android:layout_width="96dp" android:layout_height="96dp"
+            android:background="@drawable/bg_circle_avatar_white"/>
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+            android:text="✈" android:textSize="42sp"
+            android:gravity="center" android:textColor="#FFFFFF"/>
+    </FrameLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="SafarPay" android:textSize="42sp" android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Beyond Borders, Beyond Banking"
+        android:textSize="14sp" android:textColor="#B2DFDB"
+        android:layout_marginTop="8dp" android:fontFamily="@font/inter_regular"/>
+
+</LinearLayout>

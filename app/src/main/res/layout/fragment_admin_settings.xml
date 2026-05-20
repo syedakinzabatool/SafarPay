@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:overScrollMode="never">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingStart="24dp" android:paddingEnd="24dp"
+            android:paddingTop="18dp" android:paddingBottom="30dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="App Settings" android:textSize="22sp"
+                android:fontFamily="@font/poppins_bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Manage notices and configuration" android:textSize="13sp"
+                android:fontFamily="@font/inter_regular" android:textColor="#B2DFDB"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_white"
+            android:layout_marginTop="-14dp"
+            android:padding="20dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="POST ANNOUNCEMENT" android:textSize="11sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary"
+                android:textAllCaps="true" android:letterSpacing="0.08"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Announcement Title" android:layout_marginBottom="12dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxCornerRadiusTopStart="10dp" app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp" app:boxCornerRadiusBottomEnd="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoticeTitle" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Announcement Body" android:layout_marginBottom="12dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxCornerRadiusTopStart="10dp" app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp" app:boxCornerRadiusBottomEnd="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoticeBody" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:lines="3"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Type" android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginBottom="6dp"/>
+            <RadioGroup android:id="@+id/rgNoticeType"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <RadioButton android:id="@+id/rbInfo" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="ℹ Info" android:checked="true"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+                <RadioButton android:id="@+id/rbWarning" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="⚠ Warning"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+                <RadioButton android:id="@+id/rbUrgent" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="🚨 Urgent"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </RadioGroup>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Audience" android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginBottom="6dp"/>
+
+            <RadioGroup android:id="@+id/rgAudience"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <RadioButton android:id="@+id/rbAudienceAll" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="All users" android:checked="true"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+                <RadioButton android:id="@+id/rbAudienceSpecific" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:text="Specific user"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spinnerNoticeUser"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/spinner_bg"
+                android:paddingHorizontal="12dp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Info = general update. Warning = needs attention. Urgent = critical alert for users."
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginBottom="18dp"/>
+
+            <Button android:id="@+id/btnPostNotice" android:layout_width="match_parent"
+                android:layout_height="48dp" android:text="Post Announcement"
+                android:backgroundTint="@color/colorPrimary" android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium"
+                app:cornerRadius="10dp" android:layout_marginBottom="28dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="PREVIOUS ANNOUNCEMENTS" android:textSize="11sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary"
+                android:textAllCaps="true" android:letterSpacing="0.08"
+                android:layout_marginBottom="10dp"/>
+
+            <ListView android:id="@+id/listNotices" android:layout_width="match_parent"
+                android:layout_height="200dp" android:dividerHeight="1dp"
+                android:divider="@color/colorDivider"/>
+
+            <Button android:id="@+id/btnLogout" android:layout_width="match_parent"
+                android:layout_height="52dp" android:text="Log Out"
+                android:backgroundTint="@color/colorDangerLight"
+                android:textColor="@color/colorDanger"
+                android:fontFamily="@font/poppins_medium"
+                app:cornerRadius="12dp" android:layout_marginTop="28dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

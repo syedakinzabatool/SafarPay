@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp"
+    android:background="@color/colorSurface">
+
+    <TextView
+        android:id="@+id/tvDetailTripName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trip Name"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:id="@+id/tvDetailTripId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Trip ID: abc123"
+        android:textSize="11sp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/colorTextSecondary" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Destination"
+        android:textSize="10sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorTextSecondary" />
+
+    <TextView
+        android:id="@+id/tvDetailDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Malaysia"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Owner"
+        android:textSize="10sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorTextSecondary" />
+
+    <TextView
+        android:id="@+id/tvDetailOwner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="owner@email.com"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Budget"
+                android:textSize="10sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary" />
+
+            <TextView
+                android:id="@+id/tvDetailBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PKR 30000"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spent"
+                android:textSize="10sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary" />
+
+            <TextView
+                android:id="@+id/tvDetailSpent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PKR 0"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/colorWarning" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Dates"
+        android:textSize="10sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorTextSecondary" />
+
+    <TextView
+        android:id="@+id/tvDetailDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2026-04-01 to 2026-04-10"
+        android:textSize="16sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status"
+        android:textSize="10sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorTextSecondary" />
+
+    <TextView
+        android:id="@+id/tvDetailStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="ACTIVE"
+        android:textSize="12sp"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="@color/colorText"
+        android:background="@drawable/bg_pill_primary"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="5dp" />
+
+    <Button
+        android:id="@+id/btnDeleteTrip"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:text="Delete Trip"
+        android:textAllCaps="false"
+        android:textColor="@color/colorDanger"
+        android:fontFamily="@font/poppins_medium"
+        android:backgroundTint="@color/colorDangerLight" />
+
+    <Button
+        android:id="@+id/btnCloseTripDetail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="Close"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/poppins_medium"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginBottom="6dp" />
+
+</LinearLayout>

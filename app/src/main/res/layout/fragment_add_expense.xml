@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:overScrollMode="never">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingStart="24dp" android:paddingEnd="24dp"
+            android:paddingTop="20dp" android:paddingBottom="36dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Add Expense" android:textSize="22sp"
+                android:fontFamily="@font/poppins_bold" android:textColor="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Log your travel spending" android:textSize="13sp"
+                android:fontFamily="@font/inter_regular" android:textColor="#B2DFDB"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_white"
+            android:layout_marginTop="-20dp"
+            android:padding="24dp">
+
+            <!-- Amount field -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Amount (foreign currency)"
+                android:layout_marginBottom="6dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxCornerRadiusTopStart="10dp" app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp" app:boxCornerRadiusBottomEnd="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAmount" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="numberDecimal"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Conversion hint -->
+            <TextView android:id="@+id/tvConversion" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text=""
+                android:textColor="@color/colorPrimary" android:textSize="13sp"
+                android:fontFamily="@font/inter_regular"
+                android:layout_marginBottom="20dp" android:layout_marginStart="4dp"/>
+
+            <!-- Category label -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Category" android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/colorTextSecondary"
+                android:textAllCaps="true" android:letterSpacing="0.06"
+                android:layout_marginBottom="6dp"/>
+
+            <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent"
+                android:layout_height="52dp" android:layout_marginBottom="20dp"
+                android:background="@drawable/spinner_bg"/>
+
+            <!-- Note field -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="Note (optional)" android:layout_marginBottom="20dp"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxCornerRadiusTopStart="10dp" app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp" app:boxCornerRadiusBottomEnd="10dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNote" android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular" android:textColor="@color/colorText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date picker row -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="28dp"
+                android:background="@color/colorBackground"
+                android:padding="12dp">
+                <TextView android:id="@+id/tvDate" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textSize="14sp" android:fontFamily="@font/inter_regular"
+                    android:textColor="@color/colorText"/>
+                <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Pick Date"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/colorPrimary"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btnSave" android:layout_width="match_parent"
+                android:layout_height="52dp" android:text="Save Expense"
+                android:backgroundTint="@color/colorPrimary" android:textColor="#FFFFFF"
+                android:fontFamily="@font/poppins_medium" android:textSize="15sp"
+                app:cornerRadius="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

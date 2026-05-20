@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/colorBackground">
+
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="SafarPay Admin"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            app:titleTextColor="#FFFFFF"/>
+
+        <FrameLayout android:id="@+id/admin_content_frame"
+            android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="292dp" android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorSurface"
+        app:menu="@menu/admin_nav_menu"
+        app:headerLayout="@layout/nav_header_admin"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorText"
+        app:itemBackground="@drawable/bg_nav_item"
+        app:itemHorizontalPadding="18dp"
+        app:itemVerticalPadding="12dp"
+        app:dividerInsetStart="18dp"
+        app:dividerInsetEnd="18dp"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
